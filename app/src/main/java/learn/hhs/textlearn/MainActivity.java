@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity
     EditText plainText,passkey,cipherText;
     TextView decryptedText,messageText;
 
-
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -29,7 +28,6 @@ public class MainActivity extends AppCompatActivity
         encryptButton = (Button)findViewById(R.id.encryptButton);
         decryptButton = (Button)findViewById(R.id.decryptButton);
         clipBoardButton = (Button)findViewById(R.id.clipboardButton);
-
         plainText = (EditText)findViewById(R.id.plainText);
         passkey =(EditText)findViewById(R.id.passkey);
         cipherText = (EditText)findViewById(R.id.cipherText);
