@@ -1,0 +1,147 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Encrypt Decrypt AES"
+        android:textColor="#008577"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/messageLabel"
+        android:layout_width="349dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="-280dp"
+        android:layout_toStartOf="@+id/decryptButton"
+        android:textColor="@android:color/holo_red_light" />
+
+    <TextView
+        android:id="@+id/inputLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="141dp"
+        android:text="Input"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/plainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="76dp"
+        android:ems="10"
+        android:hint="Plain text"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/passkeyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="202dp"
+        android:text="Key"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/passkey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/plainText"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="191dp"
+        android:ems="10"
+        android:hint="Key"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/encryptButton"
+        android:layout_width="218dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passkey"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="13dp"
+        android:text="Encrypt" />
+
+    <Button
+        android:id="@+id/decryptButton"
+        android:layout_width="211dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/plainText"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginBottom="81dp"
+        android:text="Decrypt" />
+
+    <TextView
+        android:id="@+id/cipherTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/passkeyLabel"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginBottom="159dp"
+        android:text="Cipher"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/cipherText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/decryptedText"
+        android:layout_alignTop="@+id/cipherTextLabel"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="-15dp"
+        android:ems="10"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/clipboardButton"
+        android:layout_width="73dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cipherText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-4dp"
+        android:text="Copy" />
+
+    <TextView
+        android:id="@+id/decryptedTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/cipherTextLabel"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="43dp"
+        android:text="Decrypt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/decryptedText"
+        android:layout_width="282dp"
+        android:layout_height="47dp"
+        android:layout_alignTop="@+id/decryptedTextLabel"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="1dp"
+        android:layout_toEndOf="@+id/decryptedTextLabel" />
+
+</RelativeLayout>
